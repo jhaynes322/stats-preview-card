@@ -14,8 +14,11 @@
     --stat-head: hsla(0, 0%, 100%, 0.6);
 }
 
-.background {
+body {
     background-color: var(--main-bg);
+}
+
+.background {
     height: 100vh;
     display: flex;
     flex-direction: row;
@@ -24,16 +27,212 @@
 }
 
 .container {
+    display: flex;
+    flex-direction: row;
     background-color: var(--card-bg);
     width: 1100px;
     height: 450px;
+    border-radius: 10px;
 }
 
 .container-left {
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 70px;
+    padding-right: 125px;
+    padding-top: 80px;
+    padding-bottom: 65px;
 }
 
-img {
+.small-img {
+    display: none;
+}
+
+.big-img {
     width: 50%;
     height: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.overlay {
+    background-color: rgb(170, 92, 219);
+    position: absolute;
+    left: 50%;
+    width: 550px;
+    height: 450px;
+    opacity: 60%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.left-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.text {
+    color: var(--main-head);
+    font-size: 1.5em;
+}
+
+#gray-txt {
+    color: var(--main-p);
+    padding-top: 15px;
+}
+
+h1 {
+    color: var(--main-head);
+    font-family: 'Inter', sans-serif;
+    font-size: 2.25em;
+    padding-bottom: 30px;
+}
+
+h1 span {
+    color: var(--accent);
+    font-family: 'Inter', sans-serif;
+    font-size: 1em;
+}
+
+p {
+    color: var(--main-p);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.75em;
+    padding-bottom: 80px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--main-head);
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 650px;
+        width: 700px;
+    }
+
+    .big-img {
+        display: none;
+    }
+
+    .small-img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 0;
+    }
+
+    .container-left {
+        width: 500px;
+        padding-right: 0;
+        padding-left: 0;
+        padding-top: 20px;
+        padding-bottom: 30px;
+        justify-content: space-evenly;
+    }
+
+    p {
+        padding-bottom: 15px;
+    }
+
+    .overlay {
+        background-color: rgb(170, 92, 219);
+        position: absolute;
+        width: 700px;
+        height: auto;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 0;
+        opacity: 60%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        height: 650px;
+        width: 325px;
+    }
+
+    .big-img {
+        display: none;
+    }
+
+    .small-img {
+        display: block;
+        width: 100%;
+        height: 235px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 0;
+    }
+
+    .overlay {
+        background-color: rgb(170, 92, 219);
+        opacity: 60%;
+        width: 325px;
+        height: 235px;
+        z-index: 1;
+        position: absolute;
+        top: 2%;
+        left: 50%;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .container-left {
+        width: 275px;
+        padding-right: 0;
+        padding-left: 0;
+        padding-top: 20px;
+        padding-bottom: 50px;
+        justify-content: space-evenly;
+    }
+
+    h1 {
+        font-size: 1.75em;
+        padding-bottom: 15px;
+    }
+
+    p {
+        padding-bottom: 15px;
+        font-size: 12px;
+    }
+
+    .left-bottom {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #gray-txt {
+        padding: 0;
+        font-size: 12px;
+    }
+
+    .text {
+        padding-bottom: 10px;
+        font-size: 1em;
+    }
 }
