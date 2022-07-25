@@ -13,3 +13,27 @@
     --main-p: hsla(0, 0%, 100%, 0.75);
     --stat-head: hsla(0, 0%, 100%, 0.6);
 }
+
+.background {
+    background-color: var(--main-bg);
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: var(--card-bg);
+    width: 1100px;
+    height: 450px;
+}
+
+.container-left {
+    width: 50%;
+}
+
+img {
+    width: 50%;
+    height: 100%;
+}
